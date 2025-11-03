@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "zac",
+	"version": "${version}",
+	"name": "Zombie Apocalypse Core",
+	"description": "A necessity for zombie apocalypse modpacks.",
+	"authors": [],
+	"contact": {
+		"sources": "https://github.com/sixtynineninetynine/zacmod"
+	},
+	"license": "GPLv3",
+	"icon": "assets/zac/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.zac.ZombieApocalypseCore"
+		]
+	},
+	"mixins": [
+		"zac.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
