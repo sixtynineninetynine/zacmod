@@ -1,0 +1,13 @@
+{
+  "itemGroup.zac": "Example Mod Tab",
+  "block.zac.example_block": "Example Block",
+  "item.zac.example_item": "Example Item",
+
+  "zac.configuration.title": "Zombie Apocalypse Core Configs",
+  "zac.configuration.section.zac.common.toml": "Zombie Apocalypse Core Configs",
+  "zac.configuration.section.zac.common.toml.title": "Zombie Apocalypse Core Configs",
+  "zac.configuration.items": "Item List",
+  "zac.configuration.logDirtBlock": "Log Dirt Block",
+  "zac.configuration.magicNumberIntroduction": "Magic Number Text",
+  "zac.configuration.magicNumber": "Magic Number"
+}
