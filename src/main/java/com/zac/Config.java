@@ -1,5 +1,7 @@
 // very cool abstraction layer
 
+// i very much need to make this maintainable
+
 package com.zac;
 
 import java.util.LinkedHashMap;
@@ -17,6 +19,10 @@ public class Config {
     public static List<String> additionalZombieDrops;
     public static boolean heavilyArmoredZombiesEnabled;
     public static boolean dayCounterEnabled;
+    public static int blockMinimumHardness;
+    public static int blockMaximumHardness;
+    public static int zombieBlockBreakReach;
+    public static boolean zombiesBreakBlocks;
 
     private static final Map<String, Object> defaults = new LinkedHashMap<>() {
         {
@@ -29,6 +35,10 @@ public class Config {
                             "minecraft:potato=0.0009", "minecraft:iron_nugget=0.0005", "minecraft:gold_nugget=0.0001"));
             put("heavilyArmoredZombiesEnabled", false);
             put("dayCounterEnabled", true);
+            put("zombiesBreakBlocks", true);
+            put("zombieBlockBreakReach", 3);
+            put("blockMinimumHardness", 0);
+            put("blockMaximumHardness", 3);
         }
     };
 
@@ -41,6 +51,10 @@ public class Config {
             put("additionalZombieDrops", "List of additional drops and drop chances for zombies");
             put("heavilyArmoredZombiesEnabled", "Enable heavily armored zombies");
             put("dayCounterEnabled", "Enable day counter");
+            put("zombiesBreakBlocks", "Whether zombies can break blocks or not");
+            put("zombieBlockBreakReach", "Block breaking reach of zombies");
+            put("blockMinimumHardness", "Minimum hardness of blocks that should be broken");
+            put("blockMaximumHardness", "Maximum hardness of blocks that should be broken");
         }
     };
 
@@ -53,6 +67,10 @@ public class Config {
         additionalZombieDrops = ConfigActions.readList("additionalZombieDrops");
         heavilyArmoredZombiesEnabled = ConfigActions.readBool("heavilyArmoredZombiesEnabled");
         dayCounterEnabled = ConfigActions.readBool("dayCounterEnabled");
+        zombiesBreakBlocks = ConfigActions.readBool("zombiesBreakBlocks");
+        zombieBlockBreakReach = ConfigActions.readInt("zombieBlockBreakReach");
+        blockMinimumHardness = ConfigActions.readInt("blockMinimumHardness");
+        blockMaximumHardness = ConfigActions.readInt("blockMaximumHardness");
     }
 
     public static void onServerStopping(MinecraftServer server) {

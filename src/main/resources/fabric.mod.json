@@ -5,9 +5,7 @@
 	"name": "Zombie Apocalypse Core",
 	"description": "Necessity for zombie apocalypse modpacks.",
 	"authors": [],
-	"contact": {
-		"sources": "https://github.com/sixtynineninetynine/zacmod"
-	},
+	"contact": {},
 	"license": "GPLv3",
 	"icon": "assets/zac/icon.png",
 	"environment": "*",
