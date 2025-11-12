@@ -1,8 +1,8 @@
 {
-	"required": false,
+	"required": true,
 	"package": "com.zac.mixin",
 	"compatibilityLevel": "JAVA_21",
-	"mixins": [],
+	"mixins": ["ZombieMixin"],
 	"injectors": {
 		"defaultRequire": 1
 	},
