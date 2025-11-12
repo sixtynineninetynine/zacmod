@@ -49,6 +49,22 @@ public class Config {
                         .comment("Enable day counter")
                         .define("dayCounterEnabled", true);
 
+        private static final ModConfigSpec.BooleanValue ZOMBIES_BREAK_BLOCKS = BUILDER
+                        .comment("Whether zombies can break blocks or not")
+                        .define("zombiesBreakBlocks", true);
+
+        private static final ModConfigSpec.IntValue ZOMBIE_BLOCK_BREAK_REACH = BUILDER
+                        .comment("Block breaking reach of zombies")
+                        .defineInRange("zombieBlockBreakReach", 3, 1, 25);
+
+        private static final ModConfigSpec.IntValue BLOCK_MINIMUM_HARDNESS = BUILDER
+                        .comment("Minimum hardness of blocks that should be broken")
+                        .defineInRange("blockMinimumHardness", 0, -1, 50);
+
+        private static final ModConfigSpec.IntValue BLOCK_MAXIMUM_HARDNESS = BUILDER
+                        .comment("Maximum hardness of blocks that should be broken")
+                        .defineInRange("blockMaximumHardness", 3, 0, 51);
+
         public static final ModConfigSpec SPEC = BUILDER.build();
 
         public static int entityMultiplierRate;
@@ -58,6 +74,10 @@ public class Config {
         public static List<String> additionalZombieDrops;
         public static boolean heavilyArmoredZombiesEnabled;
         public static boolean dayCounterEnabled;
+        public static boolean zombiesBreakBlocks;
+        public static int zombieBlockBreakReach;
+        public static int blockMinimumHardness;
+        public static int blockMaximumHardness;
 
         @SubscribeEvent
         static void onLoad(final ModConfigEvent event) {
@@ -68,5 +88,9 @@ public class Config {
                 additionalZombieDrops = new ArrayList<>(ADDITIONAL_ZOMBIE_DROPS.get());
                 heavilyArmoredZombiesEnabled = HEAVILY_ARMORED_ZOMBIES_ENABLED.get();
                 dayCounterEnabled = DAY_COUNTER_ENABLED.get();
+                zombiesBreakBlocks = ZOMBIES_BREAK_BLOCKS.get();
+                zombieBlockBreakReach = ZOMBIE_BLOCK_BREAK_REACH.get();
+                blockMinimumHardness = BLOCK_MINIMUM_HARDNESS.get();
+                blockMaximumHardness = BLOCK_MAXIMUM_HARDNESS.get();
         }
 }
