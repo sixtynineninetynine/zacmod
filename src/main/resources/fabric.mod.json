@@ -7,7 +7,7 @@
 	"authors": [],
 	"contact": {},
 	"license": "GPLv3",
-	"icon": "assets/zac/icon.png",
+	"icon": "",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
